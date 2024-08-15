@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSMenu" targetNamespace="http://tempuri.org/DSMenu.xsd" xmlns:mstns="http://tempuri.org/DSMenu.xsd" xmlns="http://tempuri.org/DSMenu.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSMenu" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="DSMenu" msprop:Generator_DataSetName="DSMenu">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtMenu1" msprop:Generator_RowEvHandlerName="dtMenu1RowChangeEventHandler" msprop:Generator_RowDeletedName="dtMenu1RowDeleted" msprop:Generator_RowDeletingName="dtMenu1RowDeleting" msprop:Generator_RowEvArgName="dtMenu1RowChangeEvent" msprop:Generator_TablePropName="dtMenu1" msprop:Generator_RowChangedName="dtMenu1RowChanged" msprop:Generator_RowChangingName="dtMenu1RowChanging" msprop:Generator_TableClassName="dtMenu1DataTable" msprop:Generator_RowClassName="dtMenu1Row" msprop:Generator_TableVarName="tabledtMenu1" msprop:Generator_UserTableName="dtMenu1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_UserColumnName="id" type="xs:string" minOccurs="0" />
+              <xs:element name="name" msprop:Generator_ColumnPropNameInRow="name" msprop:Generator_ColumnPropNameInTable="nameColumn" msprop:Generator_ColumnVarNameInTable="columnname" msprop:Generator_UserColumnName="name" type="xs:string" minOccurs="0" />
+              <xs:element name="tax" msprop:Generator_ColumnPropNameInRow="tax" msprop:Generator_ColumnPropNameInTable="taxColumn" msprop:Generator_ColumnVarNameInTable="columntax" msprop:Generator_UserColumnName="tax" type="xs:string" minOccurs="0" />
+              <xs:element name="price" msprop:Generator_ColumnPropNameInRow="price" msprop:Generator_ColumnPropNameInTable="priceColumn" msprop:Generator_ColumnVarNameInTable="columnprice" msprop:Generator_UserColumnName="price" type="xs:string" minOccurs="0" />
+              <xs:element name="priceName" msprop:Generator_ColumnPropNameInRow="priceName" msprop:Generator_ColumnPropNameInTable="priceNameColumn" msprop:Generator_ColumnVarNameInTable="columnpriceName" msprop:Generator_UserColumnName="priceName" type="xs:string" minOccurs="0" />
+              <xs:element name="imageBase64" msprop:Generator_ColumnPropNameInRow="imageBase64" msprop:Generator_ColumnPropNameInTable="imageBase64Column" msprop:Generator_ColumnVarNameInTable="columnimageBase64" msprop:Generator_UserColumnName="imageBase64" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

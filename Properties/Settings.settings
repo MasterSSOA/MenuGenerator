@@ -1,0 +1,30 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="TicketManagement.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="sdfete" Type="System.String" Scope="User">
+      <Value Profile="(Default)">D8bURT+3KawdnWg554H4sg==</Value>
+    </Setting>
+    <Setting Name="vasdge" Type="System.String" Scope="User">
+      <Value Profile="(Default)">eMPcf9gU7W6EAAzGyf1yhQ==</Value>
+    </Setting>
+    <Setting Name="e4frga" Type="System.String" Scope="User">
+      <Value Profile="(Default)">M0LnkY0yGrLY5NDKnDH94g==</Value>
+    </Setting>
+    <Setting Name="Server" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="DataBase" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="User" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Pass" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="e4frg2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">0IoNCnrPKz7JR5lG51Dxrg==</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
