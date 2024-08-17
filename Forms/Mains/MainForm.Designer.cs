@@ -125,9 +125,9 @@ namespace MenuGenerator.Forms.Mains
             this.lbVersion.ForeColor = System.Drawing.Color.DimGray;
             this.lbVersion.Location = new System.Drawing.Point(187, 206);
             this.lbVersion.Name = "lbVersion";
-            this.lbVersion.Size = new System.Drawing.Size(91, 17);
+            this.lbVersion.Size = new System.Drawing.Size(89, 17);
             this.lbVersion.TabIndex = 45;
-            this.lbVersion.Text = "Versión 0.0.0.1";
+            this.lbVersion.Text = "Versión 1.0.2.1";
             // 
             // label6
             // 

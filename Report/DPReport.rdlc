@@ -7,7 +7,7 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>57313765-1cfc-4871-b8e1-6708beadce37</rd:DataSourceID>
+      <rd:DataSourceID>efc3485d-8590-4c8c-b969-5754ab7d0bbb</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
@@ -23,6 +23,10 @@
         </Field>
         <Field Name="name">
           <DataField>name</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="quantity">
+          <DataField>quantity</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="tax">
@@ -60,7 +64,7 @@
             <Source>Embedded</Source>
             <Value>header</Value>
             <Sizing>FitProportional</Sizing>
-            <Height>7.30179in</Height>
+            <Height>8.30179in</Height>
             <Width>6.67in</Width>
             <Style>
               <Border>
@@ -116,7 +120,7 @@
               </TablixColumns>
               <TablixRows>
                 <TablixRow>
-                  <Height>1.08363in</Height>
+                  <Height>0.98223in</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -224,7 +228,7 @@
                                 <Paragraph>
                                   <TextRuns>
                                     <TextRun>
-                                      <Value>=Fields!id.Value</Value>
+                                      <Value>=string.Format("{0}-{1}",Fields!id.Value,math.Round(Fields!quantity.Value))</Value>
                                       <Style>
                                         <FontFamily>Montserrat</FontFamily>
                                         <FontWeight>Bold</FontWeight>
@@ -238,9 +242,9 @@
                               </Paragraphs>
                               <rd:DefaultName>price</rd:DefaultName>
                               <Top>0.60208in</Top>
-                              <Left>2.2952in</Left>
+                              <Left>2.22348in</Left>
                               <Height>0.34404in</Height>
-                              <Width>0.94741in</Width>
+                              <Width>1.01913in</Width>
                               <ZIndex>4</ZIndex>
                               <Style>
                                 <Border>
@@ -261,6 +265,7 @@
                             </Border>
                           </Style>
                         </Rectangle>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                   </TablixCells>
@@ -359,7 +364,7 @@
             </TablixRowHierarchy>
             <DataSetName>dtMenu</DataSetName>
             <Top>3.02912in</Top>
-            <Height>1.11488in</Height>
+            <Height>1.01348in</Height>
             <Width>3.27386in</Width>
             <ZIndex>1</ZIndex>
             <Style>
@@ -369,7 +374,7 @@
             </Style>
           </Tablix>
         </ReportItems>
-        <Height>7.31568in</Height>
+        <Height>8.30179in</Height>
         <Style />
       </Body>
       <Width>6.67in</Width>

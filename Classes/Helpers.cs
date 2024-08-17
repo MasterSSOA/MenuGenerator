@@ -1409,29 +1409,73 @@ namespace MenuGenerator.Classes
                 conn.Open();
                 script = string.Format(@"
 
-                         SELECT    TBPRODUCTO.PRD_CODIGO [id]
-                                  ,PRD_DESCR [name]
-                                  ,CASE
-                                      WHEN PRD_IMP_PORC != 0 THEN
-                                      CAST(((PRD_IMP_PORC / 100) * UPR_PRECIO) AS DECIMAL(9,2))
-                                      ELSE
-                                      0
-                                  END [tax]
-                                  ,CAST(UPR_PRECIO AS DECIMAL(9,2)) [price]
-                                  ,CFP_NOMBRE [priceName]
-                              ,_base64 AS imageBase64
-                              FROM TBPRODUCTO
-                              CROSS APPLY (select PRD_FOTO as '*' for xml path('')) T (_base64)
-                              INNER JOIN TBUNDPRCPRD
-                                  ON TBPRODUCTO.PRD_COMPANIA = TBUNDPRCPRD.UPR_COMPANIA
-                                      AND TBPRODUCTO.PRD_CODIGO = TBUNDPRCPRD.PRD_CODIGO
-					          INNER JOIN TBCFGPRECIO
-                                  ON TBUNDPRCPRD.CFP_CODIGO = TBCFGPRECIO.CFP_CODIGO
-                                      AND TBUNDPRCPRD.UPR_COMPANIA = TBCFGPRECIO.CFP_COMPANIA
-							          AND CFP_ESTADO = 1
-                              WHERE TBPRODUCTO.PRD_COMPANIA = '2'
-                                      AND PRD_ESTADO = 'A'
-                                      AND TBCFGPRECIO.CFP_CODIGO = '{0}' 
+                    --Base Table.
+                    WITH base1
+                    AS
+                    (
+                    SELECT   PRD_CODIGO 
+		                    ,CASE 
+			                    WHEN CIN_TIPO = 'E' THEN DES_CANTIDAD
+			                    WHEN CIN_TIPO = 'S' THEN -DES_CANTIDAD
+	                         END AS asum
+                    FROM TBDETENTSAL
+                    WHERE DES_COMPANIA = '2'
+                    )
+
+                    , base2
+                    AS
+                    (
+                    SELECT    PRD_CODIGO 
+		                     ,SUM(DFD_CANTIDAD) AS sells
+                    FROM TBDETFACDEV
+                    WHERE DFD_COMPANIA = '2'
+                    GROUP BY PRD_CODIGO
+	                        ,DFD_COMPANIA
+                    ), 
+                    BASE
+                    AS 
+                    (
+
+                    SELECT b1.PRD_CODIGO
+ 	                      ,SUM(asum) -  sells qty
+                    FROM base1 b1
+	                    INNER JOIN base2 b2
+		                    ON b1.PRD_CODIGO = b2.PRD_CODIGO
+                    GROUP BY  b1.PRD_CODIGO 
+		                     ,sells
+
+                    )
+
+                    SELECT    TBPRODUCTO.PRD_CODIGO [id]
+                            ,PRD_DESCR [name]
+                            ,QTY AS [quantity]
+                            ,CASE
+                                WHEN PRD_IMP_PORC != 0 THEN
+                                CAST(((PRD_IMP_PORC / 100) * UPR_PRECIO) AS DECIMAL(9,2))
+                                ELSE
+                                0
+                            END [tax]
+                            ,CAST(UPR_PRECIO AS DECIMAL(9,2)) [price]
+                            ,CFP_NOMBRE [priceName]
+                            ,_base64 AS imageBase64
+                            
+                        FROM TBPRODUCTO
+                        CROSS APPLY (select PRD_FOTO as '*' for xml path('')) T (_base64)
+                        INNER JOIN TBUNDPRCPRD
+                            ON TBPRODUCTO.PRD_COMPANIA = TBUNDPRCPRD.UPR_COMPANIA
+                                AND TBPRODUCTO.PRD_CODIGO = TBUNDPRCPRD.PRD_CODIGO
+	                    INNER JOIN TBCFGPRECIO
+                            ON TBUNDPRCPRD.CFP_CODIGO = TBCFGPRECIO.CFP_CODIGO
+                                AND TBUNDPRCPRD.UPR_COMPANIA = TBCFGPRECIO.CFP_COMPANIA
+			                    AND CFP_ESTADO = 1
+	                    INNER JOIN BASE 
+		                    ON BASE.PRD_CODIGO = TBPRODUCTO.PRD_CODIGO
+                        WHERE TBPRODUCTO.PRD_COMPANIA = '2'
+                                AND PRD_ESTADO = 'A'
+                                AND TBCFGPRECIO.CFP_CODIGO = {0} 
+			                    AND QTY > 0
+                        ORDER BY PRD_DESCR 
+
                     ", precioId);
                 command = new SqlCommand(script, conn);
                 command.CommandTimeout = 2000;

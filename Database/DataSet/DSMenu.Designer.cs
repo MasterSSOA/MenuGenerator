@@ -283,6 +283,8 @@ namespace MenuGenerator.Database.DataSet {
             
             private global::System.Data.DataColumn columnname;
             
+            private global::System.Data.DataColumn columnquantity;
+            
             private global::System.Data.DataColumn columntax;
             
             private global::System.Data.DataColumn columnprice;
@@ -337,6 +339,14 @@ namespace MenuGenerator.Database.DataSet {
             public global::System.Data.DataColumn nameColumn {
                 get {
                     return this.columnname;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn quantityColumn {
+                get {
+                    return this.columnquantity;
                 }
             }
             
@@ -409,11 +419,12 @@ namespace MenuGenerator.Database.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public dtMenu1Row AdddtMenu1Row(string id, string name, string tax, string price, string priceName, string imageBase64) {
+            public dtMenu1Row AdddtMenu1Row(string id, string name, string quantity, string tax, string price, string priceName, string imageBase64) {
                 dtMenu1Row rowdtMenu1Row = ((dtMenu1Row)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         id,
                         name,
+                        quantity,
                         tax,
                         price,
                         priceName,
@@ -442,6 +453,7 @@ namespace MenuGenerator.Database.DataSet {
             internal void InitVars() {
                 this.columnid = base.Columns["id"];
                 this.columnname = base.Columns["name"];
+                this.columnquantity = base.Columns["quantity"];
                 this.columntax = base.Columns["tax"];
                 this.columnprice = base.Columns["price"];
                 this.columnpriceName = base.Columns["priceName"];
@@ -455,6 +467,8 @@ namespace MenuGenerator.Database.DataSet {
                 base.Columns.Add(this.columnid);
                 this.columnname = new global::System.Data.DataColumn("name", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnname);
+                this.columnquantity = new global::System.Data.DataColumn("quantity", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnquantity);
                 this.columntax = new global::System.Data.DataColumn("tax", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columntax);
                 this.columnprice = new global::System.Data.DataColumn("price", typeof(string), null, global::System.Data.MappingType.Element);
@@ -637,6 +651,22 @@ namespace MenuGenerator.Database.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string quantity {
+                get {
+                    try {
+                        return ((string)(this[this.tabledtMenu1.quantityColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'quantity\' in table \'dtMenu1\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabledtMenu1.quantityColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string tax {
                 get {
                     try {
@@ -721,6 +751,18 @@ namespace MenuGenerator.Database.DataSet {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetnameNull() {
                 this[this.tabledtMenu1.nameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsquantityNull() {
+                return this.IsNull(this.tabledtMenu1.quantityColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetquantityNull() {
+                this[this.tabledtMenu1.quantityColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
