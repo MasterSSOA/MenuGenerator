@@ -1,7 +1,7 @@
 ﻿
 namespace MenuGenerator.Forms.Mains
 {
-    partial class LoginForm
+    partial class MainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -30,21 +30,21 @@ namespace MenuGenerator.Forms.Mains
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.pnlMain = new System.Windows.Forms.Panel();
             this.pnlPrincipal = new System.Windows.Forms.Panel();
             this.prgLoading = new Bunifu.Framework.UI.BunifuCircleProgressbar();
             this.label1 = new System.Windows.Forms.Label();
             this.lbVersion = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.pctLogo = new System.Windows.Forms.PictureBox();
-            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.btnMinimize = new CustomComponent.CButtonCBorder();
             this.btnCloseApp = new CustomComponent.CButtonCBorder();
+            this.pctLogo = new System.Windows.Forms.PictureBox();
+            this.cmbPriceList = new ExportGasPerformance.Appearance.CDropDown();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.btnReport = new MenuGenerator.Appearance.CButton();
             this.btnConn = new MenuGenerator.Appearance.CButton();
-            this.cmbPriceList = new ExportGasPerformance.Appearance.CDropDown();
             this.pnlMain.SuspendLayout();
             this.pnlPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).BeginInit();
@@ -141,21 +141,6 @@ namespace MenuGenerator.Forms.Mains
             this.label6.TabIndex = 46;
             this.label6.Text = "Generador de Menú";
             // 
-            // pctLogo
-            // 
-            this.pctLogo.Image = global::MenuGenerator.Properties.Resources.main_logo1;
-            this.pctLogo.Location = new System.Drawing.Point(12, 46);
-            this.pctLogo.Name = "pctLogo";
-            this.pctLogo.Size = new System.Drawing.Size(176, 139);
-            this.pctLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pctLogo.TabIndex = 40;
-            this.pctLogo.TabStop = false;
-            // 
-            // bunifuElipse1
-            // 
-            this.bunifuElipse1.ElipseRadius = 40;
-            this.bunifuElipse1.TargetControl = this;
-            // 
             // btnMinimize
             // 
             this.btnMinimize.BackBorderColor = System.Drawing.Color.Transparent;
@@ -210,6 +195,40 @@ namespace MenuGenerator.Forms.Mains
             this.btnCloseApp.UseVisualStyleBackColor = false;
             this.btnCloseApp.Click += new System.EventHandler(this.btnCloseApp_Click);
             // 
+            // pctLogo
+            // 
+            this.pctLogo.Image = global::MenuGenerator.Properties.Resources.main_logo1;
+            this.pctLogo.Location = new System.Drawing.Point(12, 46);
+            this.pctLogo.Name = "pctLogo";
+            this.pctLogo.Size = new System.Drawing.Size(176, 139);
+            this.pctLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pctLogo.TabIndex = 40;
+            this.pctLogo.TabStop = false;
+            // 
+            // cmbPriceList
+            // 
+            this.cmbPriceList.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cmbPriceList.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(146)))), ((int)(((byte)(97)))));
+            this.cmbPriceList.BorderSize = 2;
+            this.cmbPriceList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbPriceList.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.cmbPriceList.ForeColor = System.Drawing.Color.DimGray;
+            this.cmbPriceList.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(146)))), ((int)(((byte)(97)))));
+            this.cmbPriceList.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(236)))), ((int)(((byte)(230)))));
+            this.cmbPriceList.ListTextColor = System.Drawing.Color.DimGray;
+            this.cmbPriceList.Location = new System.Drawing.Point(211, 81);
+            this.cmbPriceList.MinimumSize = new System.Drawing.Size(200, 40);
+            this.cmbPriceList.Name = "cmbPriceList";
+            this.cmbPriceList.Padding = new System.Windows.Forms.Padding(2);
+            this.cmbPriceList.Size = new System.Drawing.Size(200, 40);
+            this.cmbPriceList.TabIndex = 121;
+            this.cmbPriceList.Texts = "";
+            // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 40;
+            this.bunifuElipse1.TargetControl = this;
+            // 
             // btnReport
             // 
             this.btnReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(146)))), ((int)(((byte)(97)))));
@@ -254,26 +273,7 @@ namespace MenuGenerator.Forms.Mains
             this.btnConn.UseVisualStyleBackColor = false;
             this.btnConn.Click += new System.EventHandler(this.btnConn_Click);
             // 
-            // cmbPriceList
-            // 
-            this.cmbPriceList.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.cmbPriceList.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(146)))), ((int)(((byte)(97)))));
-            this.cmbPriceList.BorderSize = 2;
-            this.cmbPriceList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbPriceList.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.cmbPriceList.ForeColor = System.Drawing.Color.DimGray;
-            this.cmbPriceList.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(146)))), ((int)(((byte)(97)))));
-            this.cmbPriceList.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.cmbPriceList.ListTextColor = System.Drawing.Color.DimGray;
-            this.cmbPriceList.Location = new System.Drawing.Point(211, 81);
-            this.cmbPriceList.MinimumSize = new System.Drawing.Size(200, 40);
-            this.cmbPriceList.Name = "cmbPriceList";
-            this.cmbPriceList.Padding = new System.Windows.Forms.Padding(2);
-            this.cmbPriceList.Size = new System.Drawing.Size(200, 40);
-            this.cmbPriceList.TabIndex = 121;
-            this.cmbPriceList.Texts = "";
-            // 
-            // LoginForm
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -281,7 +281,7 @@ namespace MenuGenerator.Forms.Mains
             this.Controls.Add(this.pnlMain);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "LoginForm";
+            this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.LoginForm_Load);
             this.pnlMain.ResumeLayout(false);

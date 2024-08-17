@@ -29,6 +29,7 @@ namespace MenuGenerator.Forms.Others
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConnForm));
             this.lbUser = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -185,6 +186,7 @@ namespace MenuGenerator.Forms.Others
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lbUser);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Location = new System.Drawing.Point(455, 333);
             this.MaximumSize = new System.Drawing.Size(455, 333);
             this.Name = "ConnForm";

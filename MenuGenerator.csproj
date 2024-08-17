@@ -48,7 +48,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>ticketIcon %285%29.ico</ApplicationIcon>
+    <ApplicationIcon>restaurant-menu.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu_UI_v1.5.3">
@@ -146,11 +146,11 @@
     <Compile Include="Classes\dbConn.cs" />
     <Compile Include="Classes\Helpers.cs" />
     <Compile Include="Classes\TicketEstInfo.cs" />
-    <Compile Include="Forms\Mains\LoginForm.cs">
+    <Compile Include="Forms\Mains\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Mains\LoginForm.Designer.cs">
-      <DependentUpon>LoginForm.cs</DependentUpon>
+    <Compile Include="Forms\Mains\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Others\ConnForm.cs">
       <SubType>Form</SubType>
@@ -173,8 +173,8 @@
     <EmbeddedResource Include="Appearance\CTextBox.resx">
       <DependentUpon>CTextBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Mains\LoginForm.resx">
-      <DependentUpon>LoginForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Mains\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Others\ConnForm.resx">
       <DependentUpon>ConnForm.cs</DependentUpon>
@@ -250,6 +250,7 @@
     <None Include="Resources\switchOn1.png" />
     <None Include="Resources\switchOff1.png" />
     <Content Include="Resources\user.png" />
+    <Content Include="restaurant-menu.ico" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -263,7 +264,6 @@
     <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ticketIcon %285%29.ico" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">

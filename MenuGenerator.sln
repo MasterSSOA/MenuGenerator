@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MenuGenerator", "MenuGenera
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ARDClassLibrary", "..\CustomComponent\ARDClassLibrary.csproj", "{18DAABEC-8648-4D9F-952C-B71050B4A5E2}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "..\Setup\Setup.vdproj", "{FAEEB6D6-3170-4F3F-A01F-3B223CF97347}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,8 @@ Global
 		{18DAABEC-8648-4D9F-952C-B71050B4A5E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{18DAABEC-8648-4D9F-952C-B71050B4A5E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{18DAABEC-8648-4D9F-952C-B71050B4A5E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAEEB6D6-3170-4F3F-A01F-3B223CF97347}.Debug|Any CPU.ActiveCfg = Debug
+		{FAEEB6D6-3170-4F3F-A01F-3B223CF97347}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -15,7 +15,7 @@ using static MenuGenerator.Appearance.AlertForm;
 
 namespace MenuGenerator.Forms.Mains
 {
-    public partial class LoginForm : Form
+    public partial class MainForm : Form
     {
         //Globals.
         BackgroundWorker worker;
@@ -27,7 +27,7 @@ namespace MenuGenerator.Forms.Mains
         internal Transition transition1;
 
         //Constructor.
-        public LoginForm()
+        public MainForm()
         {
             InitializeComponent();
             InicialTheme();
