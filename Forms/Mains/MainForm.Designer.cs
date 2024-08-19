@@ -127,7 +127,7 @@ namespace MenuGenerator.Forms.Mains
             this.lbVersion.Name = "lbVersion";
             this.lbVersion.Size = new System.Drawing.Size(89, 17);
             this.lbVersion.TabIndex = 45;
-            this.lbVersion.Text = "Versión 1.0.2.1";
+            this.lbVersion.Text = "Versión 1.0.4.1";
             // 
             // label6
             // 
